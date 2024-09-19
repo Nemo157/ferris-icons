@@ -1,13 +1,13 @@
-{ lib, runCommand, fantasticon, stdenvNoCC }: stdenvNoCC.mkDerivation {
+{ lib, runCommand, fantasticon, just, stdenvNoCC }: stdenvNoCC.mkDerivation {
   pname = "ferris-icons";
   version = "owo";
 
   src = ./.;
 
-  nativeBuildInputs = [ fantasticon ];
+  nativeBuildInputs = [ fantasticon just ];
 
   buildPhase = ''
-    fantasticon
+    just build
   '';
 
   installPhase = ''

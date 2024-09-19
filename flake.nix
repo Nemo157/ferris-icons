@@ -50,7 +50,7 @@
 
       devShells.default = pkgs.mkShell {
         inputsFrom = with pkgs; [ ferris-icons ];
-        nativeBuildInputs = with pkgs; [ just watchexec ];
+        nativeBuildInputs = with pkgs; [ watchexec ];
       };
     }
   );
